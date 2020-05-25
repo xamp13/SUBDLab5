@@ -1,0 +1,33 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using Microsoft.EntityFrameworkCore;
+using SUBDLab5.Models;
+
+namespace SUBDLab5
+{
+    public class NewsPortalDatabase : DbContext
+    {
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (optionsBuilder.IsConfigured == false)
+            {
+                optionsBuilder.UseSqlServer(@"Data Source=HOME-PC;Initial Catalog=NewsPortalDatabase;Integrated Security=True;MultipleActiveResultSets=True;");
+            }
+            base.OnConfiguring(optionsBuilder);
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+         /*  modelBuilder.Entity<Client>().HasIndex(c => c.Name);
+            modelBuilder.Entity<Supplier>().HasIndex(c => c.Name_Organization);
+            modelBuilder.Entity<Material>().HasIndex(c => c.Name_Material);*/
+        }
+        public virtual DbSet<Author> Authors { set; get; }
+        public virtual DbSet<Category> Categories { set; get; }
+        public virtual DbSet<Comment> Comments { set; get; }
+        public virtual DbSet<News> News { set; get; }
+        public virtual DbSet<Subscription> Subscriptions { get; set; }
+        public virtual DbSet<Username> Usernames { get; set; }
+    }
+}
