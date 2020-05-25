@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29926.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SUBDLab5", "SUBDLab5\SUBDLab5.csproj", "{8764DCB5-D184-4BB0-985D-9A44A09BBACD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8764DCB5-D184-4BB0-985D-9A44A09BBACD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8764DCB5-D184-4BB0-985D-9A44A09BBACD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8764DCB5-D184-4BB0-985D-9A44A09BBACD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8764DCB5-D184-4BB0-985D-9A44A09BBACD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AF714D67-0772-41D4-B01A-4209E4ABF9CF}
+	EndGlobalSection
+EndGlobal
