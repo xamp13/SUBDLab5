@@ -25,6 +25,16 @@ namespace SUBDLab5.BusinessLogic
             this.subscriptionService = subscriptionService;
         }
 
+        public MainLogic(AuthorService authorService, CategoryService categoryService, CommentService commentService, NewsService newsService, SubscriptionService subscriptionService, UsernameService usernameService)
+        {
+            this.authorService = authorService;
+            this.categoryService = categoryService;
+            this.commentService = commentService;
+            this.newsService = newsService;
+            this.subscriptionService = subscriptionService;
+            this.usernameService = usernameService;
+        }
+
         public void CreateAuthor(string Name)
         {
             Author author = new Author()
