@@ -292,10 +292,10 @@ namespace SUBDLab5.BusinessLogic
                     categoryService.Zapros_3();
                 }
 
-               /* public void MaterialSupplier()
+                public void AuthorNews()
                 {
                     authorService.Zapros_4();
-                }*/
+                }
 
     }
 }

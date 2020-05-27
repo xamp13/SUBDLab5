@@ -14,14 +14,14 @@ namespace SUBDLab5
             Insert(logic);
             Stopwatch clock = new Stopwatch();
             clock.Start();
-            //logic.CreateUsername("DOADR7", "AYd!ff", "123126");
+            //logic.CreateUsername("aasdas", "AYdass!ff", "12312644");
             //logic.ReadUsername();
-            //logic.UpdateUsername(5, "T", "Tr", "hg");
-            //logic.DeleteUsername(5, "T", "Tr", "hg");
+            //logic.UpdateUsername(6, "Tf", "Ta", "hga");
+            //logic.DeleteUsername(6, "Tf", "Ta", "hga");
             //logic.UsernameComment();
             //logic.UserNewsComment();
-            //logic.MaterialSupplier();
-            // logic.OrderUsername();
+            //logic.AuthorNews();
+            //logic.OrderUsername();
             clock.Stop();
             Console.WriteLine(clock.ElapsedMilliseconds);
 

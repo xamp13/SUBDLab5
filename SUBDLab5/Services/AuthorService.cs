@@ -55,23 +55,21 @@ namespace SUBDLab5.Services
             return db.Authors.FirstOrDefault(c => c.Id == Id);
         }
 
-        /*public void Zapros_4()
+        public void Zapros_4()
         {
-            var authors = db.Authors
-                .Include(s => s.News)
-                .ToList()
-                .OrderByDescending(s => s.Id.Sum(m => m.Sum))
-                .GroupBy(s => s.Title)
-                .Take(10)
-                .Select(s => new
+            var authors = db.News
+                .Join(db.Authors,
+                c => c.AuthorId,
+                s => s.Id,
+                (c, s) => new
                 {
-                    NameOrg = s.Key,
-                    sum = s.ToList().Sum(s => s.News.Sum(m => m.Sum))
+                    s.Name,
+                    c.Title
                 });
             foreach (var c in authors)
             {
-                Console.WriteLine(c.Title + " " + c.sum);
+                Console.WriteLine(c.Name + " " + c.Title);
             }
-        }*/
+        }
     }
 }

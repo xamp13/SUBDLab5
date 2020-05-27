@@ -19,9 +19,9 @@ namespace SUBDLab5
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-         /*  modelBuilder.Entity<Client>().HasIndex(c => c.Name);
-            modelBuilder.Entity<Supplier>().HasIndex(c => c.Name_Organization);
-            modelBuilder.Entity<Material>().HasIndex(c => c.Name_Material);*/
+           modelBuilder.Entity<Username>().HasIndex(c => c.Nickname);
+           modelBuilder.Entity<News>().HasIndex(c => c.Title);
+           modelBuilder.Entity<Author>().HasIndex(c => c.Name);
         }
         public virtual DbSet<Author> Authors { set; get; }
         public virtual DbSet<Category> Categories { set; get; }
