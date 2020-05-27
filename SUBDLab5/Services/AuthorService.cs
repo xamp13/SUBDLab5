@@ -55,22 +55,22 @@ namespace SUBDLab5.Services
             return db.Authors.FirstOrDefault(c => c.Id == Id);
         }
 
-/*        public void Zapros_4()
+        /*public void Zapros_4()
         {
             var authors = db.Authors
-                .Include(s => s.Material)
+                .Include(s => s.News)
                 .ToList()
-                .OrderByDescending(s => s.Material.Sum(m => m.Sum))
-                .GroupBy(s => s.Name_Organization)
+                .OrderByDescending(s => s.Id.Sum(m => m.Sum))
+                .GroupBy(s => s.Title)
                 .Take(10)
                 .Select(s => new
                 {
                     NameOrg = s.Key,
-                    sum = s.ToList().Sum(s => s.Material.Sum(m => m.Sum))
+                    sum = s.ToList().Sum(s => s.News.Sum(m => m.Sum))
                 });
             foreach (var c in authors)
             {
-                Console.WriteLine(c.NameOrg + " " + c.sum);
+                Console.WriteLine(c.Title + " " + c.sum);
             }
         }*/
     }

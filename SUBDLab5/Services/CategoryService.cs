@@ -55,16 +55,16 @@ namespace SUBDLab5.Services
             return db.Categories.FirstOrDefault(c => c.Id == Id);
         }
 
-       /* public void OrderClientName()
+       public void OrderUserName()
         {
-            var client = db.Clients.OrderBy(c => c.Surname);
-            foreach (Client c in client)
+            var username = db.Usernames.OrderBy(c => c.Nickname);
+            foreach (Username c in username)
             {
-                Console.WriteLine(c.Surname + " " + c.Name + " " + c.Adress + " " + c.Phone_Numper);
+                Console.WriteLine(c.Nickname + " " + c.Password + " " + c.Email);
             }
         }
 
-        public void Zapros_2()
+/*        public void Zapros_2()
         {
             var client = from p in db.Services
                          join c in db.Clients on p.ClientId equals c.Id
@@ -73,36 +73,35 @@ namespace SUBDLab5.Services
             {
                 Console.WriteLine(c.Surname + " " + c.Name + " " + c.Adress + " " + c.Name_Service);
             }
-        }
+        }*/
 
         public void zap_2()
         {
-            var client = db.Services
-                .Join(db.Clients,
-                c => c.ClientId,
+            var username = db.Comments
+                .Join(db.Usernames,
+                c => c.UsernameId,
                 s => s.Id,
                 (c, s) => new
                 {
-                    s.Surname,
-                    s.Name,
-                    s.Adress,
-                    c.Name_Service
+                    s.Nickname,
+                    s.Email,
+                    c.Comment_Text
                 });
-            foreach (var c in client)
+            foreach (var c in username)
             {
-                Console.WriteLine(c.Surname + " " + c.Name + " " + c.Adress + " " + c.Name_Service);
+                Console.WriteLine(c.Nickname + " " + c.Email + " " + c.Comment_Text);
             }
         }
         public void Zapros_3()
         {
-            var client = from p in db.Materials
-                         join c in db.Orders on p.OrderId equals c.Id
-                         join r in db.Clients on c.ClientId equals r.Id
-                         select new { r.Surname, r.Name, c.Adress, p.Name_Material, p.Sum };
+            var client = from p in db.Comments
+                         join c in db.Usernames on p.UsernameId equals c.Id
+                         join r in db.News on p.NewsId equals r.Id
+                         select new { r.Title, r.Date_of_News, c.Nickname, p.Comment_Text};
             foreach (var c in client)
             {
-                Console.WriteLine(c.Surname + " " + c.Name + " " + c.Adress + " " + c.Name_Material + " " + c.Sum);
+                Console.WriteLine(c.Title + " " + c.Date_of_News + " " + c.Nickname + " " + c.Comment_Text);
             }
-        }*/
+        }
     }
 }

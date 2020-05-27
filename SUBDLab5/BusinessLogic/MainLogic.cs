@@ -277,24 +277,24 @@ namespace SUBDLab5.BusinessLogic
         }
 
 
-        /*        public void OrderClient()
+                public void OrderUsername()
                 {
-                    authorService.OrderClientName();
+                    categoryService.OrderUserName();
                 }
 
-                public void ClientService()
+                public void UsernameComment()
                 {
-                    authorService.zap_2();
+                    categoryService.zap_2();
                 }
 
-                public void ClientOrderMaterial()
+                public void UserNewsComment()
                 {
-                    authorService.Zapros_3();
+                    categoryService.Zapros_3();
                 }
 
-                public void MaterialSupplier()
+               /* public void MaterialSupplier()
                 {
-                    usernameService.Zapros_4();
+                    authorService.Zapros_4();
                 }*/
 
     }

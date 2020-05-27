@@ -14,14 +14,14 @@ namespace SUBDLab5
             Insert(logic);
             Stopwatch clock = new Stopwatch();
             clock.Start();
-            //logic.CreateClient("Test", "Tester", "Yliza", 32123);
-            //logic.ReadClient();
-            //logic.UpdateClient(6, "T", "Tr", "hg", 1);
-            //logic.DeleteClient(6, "T", "Tr", "hg", 1);
-            //logic.ClientService();
-            //logic.ClientOrderMaterial();
+            //logic.CreateUsername("DOADR7", "AYd!ff", "123126");
+            //logic.ReadUsername();
+            //logic.UpdateUsername(5, "T", "Tr", "hg");
+            //logic.DeleteUsername(5, "T", "Tr", "hg");
+            //logic.UsernameComment();
+            //logic.UserNewsComment();
             //logic.MaterialSupplier();
-           // logic.OrderClient();
+            // logic.OrderUsername();
             clock.Stop();
             Console.WriteLine(clock.ElapsedMilliseconds);
 
@@ -30,24 +30,24 @@ namespace SUBDLab5
         {
 /*            logic.CreateAuthor("Ivan Petrov");
             logic.CreateAuthor("Petr Ivanov");
-            
+
             logic.CreateCategory("Health");
             logic.CreateCategory("Auto");
-            logic.CreateCategory("Politics");*/
+            logic.CreateCategory("Politics");
 
             logic.CreateComment("VAuu", 1, 2);
             logic.CreateComment("Davno zamwetil chto politica ne ta stala", 2, 1);
 
-      /*      logic.CreateNews("Ukrali tualet", DateTime.Parse("11.07.2000"), 1, 3);
+            logic.CreateNews("Ukrali tualet", DateTime.Parse("11.07.2000"), 1, 3);
             logic.CreateNews("Novii VolksWagen polo za 10 rublei", DateTime.Parse("22.11.2000"), 1, 2);
             logic.CreateNews("Konstitucia obnovili)", DateTime.Parse("21.02.2021"), 2, 1);
-            logic.CreateNews("Konstitucia otmenili)", DateTime.Parse("21.03.2021"), 2, 1);*/
+            logic.CreateNews("Konstitucia otmenili)", DateTime.Parse("21.03.2021"), 2, 1);
 
             logic.CreateSubscription(1, 1);
             logic.CreateSubscription(2, 3);
             logic.CreateSubscription(3, 2);
 
-           /* logic.CreateUsername("DOMINATOR777", "Alfkf", "123456");
+            logic.CreateUsername("DOMINATOR777", "Alfkf", "123456");
             logic.CreateUsername("PESHKANAVALNOGO1", "KotYa883", "pasLol");
             logic.CreateUsername("OPOZICIA", "flflfl", "loveGames");
             logic.CreateUsername("babushkinirecepti", "salambrodyagi", "lovefTest");*/
