@@ -5,6 +5,7 @@ using System.Text;
 using SUBDLab5.Interface;
 using SUBDLab5.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 
 namespace SUBDLab5.Services
 {
@@ -51,7 +52,22 @@ namespace SUBDLab5.Services
             return db.News.ToList();
         }
 
-        public News Get(int Id)
+        public void ReadStranichno(int strok, int skipstrok)
+        {
+            var news = from n in db.News.Skip(skipstrok).Take(strok)
+                       select new
+                       {
+                           n.Id,
+                           n.Title,
+                           n.Date_of_News
+                       };
+            foreach (var c in news)
+            {
+                Console.WriteLine(c.Title + " " + c.Date_of_News);
+            }
+        }
+
+            public News Get(int Id)
         {
             return db.News.FirstOrDefault(c => c.Id == Id);
         }

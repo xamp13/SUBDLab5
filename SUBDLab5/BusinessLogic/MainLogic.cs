@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Text;
 using SUBDLab5.Models;
 using SUBDLab5.Services;
@@ -277,25 +278,24 @@ namespace SUBDLab5.BusinessLogic
         }
 
 
-                public void OrderUsername()
-                {
-                    categoryService.OrderUserName();
-                }
+        public void OrderUsername()
+        {
+            categoryService.OrderUserName();
+        }
 
-                public void UsernameComment()
-                {
-                    categoryService.zap_2();
-                }
+        public void UsernameComment()
+        {
+            categoryService.zap_2();
+        }
 
-                public void UserNewsComment()
-                {
-                    categoryService.Zapros_3();
-                }
+        public void UserNewsComment()
+        {
+            categoryService.Zapros_3();
+        }
 
-                public void AuthorNews()
-                {
-                    authorService.Zapros_4();
-                }
-
+        public void AuthorNews()
+        {
+            authorService.Zapros_4();
+        }
     }
 }

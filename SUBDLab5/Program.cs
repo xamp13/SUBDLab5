@@ -12,6 +12,7 @@ namespace SUBDLab5
         {
             MainLogic logic = new MainLogic(new AuthorService(), new CategoryService(), new CommentService(), new NewsService(), new SubscriptionService(), new UsernameService());
             Insert(logic);
+            NewsService newsLogic = new NewsService();
             Stopwatch clock = new Stopwatch();
             clock.Start();
             //logic.CreateUsername("aasdas", "AYdass!ff", "12312644");
@@ -22,6 +23,7 @@ namespace SUBDLab5
             //logic.UserNewsComment();
             //logic.AuthorNews();
             //logic.OrderUsername();
+            newsLogic.ReadStranichno(3, 1);
             clock.Stop();
             Console.WriteLine(clock.ElapsedMilliseconds);
 
